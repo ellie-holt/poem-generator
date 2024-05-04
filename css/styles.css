@@ -6,6 +6,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-colour: #23223a;
+  --border-color: #000000;
+  --bg-colour: #fffbd6;
+  --secondary-bg-colour: #d9d7ff;
+  --accent-colour: #6d255f;
+}
+
 body,
 h1,
 p {
@@ -18,11 +26,15 @@ body {
 }
 
 h1 {
+  color: var(--text-colour);
+  font-family: "Libre Baskerville", serif;
+  font-size: 2.8rem;
   text-align: center;
+  /* font-weight: 500; */
 }
 
 a {
-  color: red;
+  color: var(--accent-colour);
 }
 
 /*** LAYOUT ***/
@@ -42,11 +54,13 @@ main {
 /* Footer */
 
 footer {
-  margin: 1.5rem 4rem;
+  margin: 3rem 5rem;
 }
 
 footer p {
-  border-top: 1.5px solid black;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-top: 1.5px solid var(--text-colour);
   padding: 0.5rem;
   text-align: center;
 }
@@ -60,12 +74,18 @@ footer p {
   max-width: fit-content;
 }
 
+.submit-button,
 .user-input {
-  margin: 0.5rem auto 1rem;
+  font-size: 0.9rem;
+  margin: 0.5rem auto 2rem;
   padding: 0.2rem;
+}
+
+.user-input {
   background: none;
-  border-color: black;
+  border-color: var(--text-colour);
   border-style: none none solid;
+  font-family: "Jost", sans-serif;
 }
 
 .user-input:focus-visible {
@@ -74,10 +94,10 @@ footer p {
 }
 
 .submit-button {
-  margin: 0.5rem auto 1rem;
-  padding: 0.2rem;
+  background-color: var(--secondary-bg-colour);
   border-radius: 0;
-  border: 2px solid black;
+  border: 2px solid var(--text-colour);
+  font-family: "Jost", sans-serif;
 }
 
 .submit-button:hover {
@@ -87,9 +107,11 @@ footer p {
 /* Output */
 
 .poem {
-  background-color: bisque;
-  padding: 0.5rem 1rem;
-  margin-left: 1.5rem;
+  font-size: 1.2rem;
+  background-color: var(--bg-colour);
+  padding: 0.5rem 1rem 1.2rem;
+  margin: 0 auto;
+  /* margin-left: 2.5rem; */
   max-width: fit-content;
 }
 
