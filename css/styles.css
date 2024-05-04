@@ -1,3 +1,96 @@
+/*** BASE STYLES ***/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "EB Garamond", serif;
+}
+
+h1 {
+  text-align: center;
+}
+
 a {
   color: red;
 }
+
+/*** LAYOUT ***/
+
+/* Header */
+
+header {
+  margin: 1.5rem 1rem 0.5rem;
+}
+
+/* Main */
+
+main {
+  margin: 1rem;
+}
+
+/* Footer */
+
+footer {
+  margin: 1.5rem 4rem;
+}
+
+footer p {
+  border-top: 1.5px solid black;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/*** COMPONENTS ***/
+
+/* Form */
+
+.form-group {
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+.user-input {
+  margin: 0.5rem auto 1rem;
+  padding: 0.2rem;
+  background: none;
+  border-color: black;
+  border-style: none none solid;
+}
+
+.user-input:focus-visible {
+  outline: 2px dashed #3d3d3d;
+  outline-offset: 5px;
+}
+
+.submit-button {
+  margin: 0.5rem auto 1rem;
+  padding: 0.2rem;
+  border-radius: 0;
+  border: 2px solid black;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+}
+
+/* Output */
+
+.poem {
+  background-color: bisque;
+  padding: 0.5rem 1rem;
+  margin-left: 1.5rem;
+  max-width: fit-content;
+}
+
+/*** RESPONSIVE BREAKPOINTS ***/
