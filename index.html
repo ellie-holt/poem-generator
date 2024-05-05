@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Poem Generator</title>
   </head>
   <body>
@@ -19,7 +20,7 @@
 
     <main>
       <div class="bg-box"></div>
-      <form action="">
+      <form id="prompt-form">
         <div class="form-group">
           <input
             type="text"
@@ -31,11 +32,11 @@
           /><button type="submit" class="submit-button">Submit</button>
         </div>
       </form>
-      <section class="poem">
-        <p>
+      <section class="poem" id="poem">
+        <!-- <p>
           Joy and woe are woven fine, <br />
           A clothing for the soul divine
-        </p>
+        </p> -->
       </section>
     </main>
 
