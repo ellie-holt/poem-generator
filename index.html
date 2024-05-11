@@ -20,44 +20,48 @@
     <title>Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Poet</h1>
-    </header>
+    <div class="container">
+      <header>
+        <h1>
+          <span class="top-line">AI Poem</span>
+          <span class="bottom-line">Generator</span>
+        </h1>
+      </header>
 
-    <main>
-      <div class="bg-box"></div>
-      <form id="prompt-form">
-        <div class="form-group">
-          <input
-            type="text"
-            class="user-input"
-            id="user-input"
-            placeholder="Enter topic here"
-            autocomplete="off"
-            autofocus
-            required
-          /><button type="submit" class="submit-button">Submit</button>
-        </div>
-      </form>
-      <section class="poem" id="poem">
-        <!-- <p>
-          Joy and woe are woven fine, <br />
-          A clothing for the soul divine
-        </p> -->
-      </section>
-    </main>
+      <main>
+        <div class="bg-box"></div>
+        <form id="prompt-form">
+          <div class="form-group">
+            <input
+              type="text"
+              class="user-input"
+              id="user-input"
+              placeholder="Enter topic here"
+              autocomplete="off"
+              autofocus
+              required
+            /><button type="submit" class="submit-button"><p>Submit</p></button>
+          </div>
+        </form>
+        <div
+          class="generating-message hidden blinking"
+          id="generating-message"
+        ></div>
+        <section class="poem hidden" id="poem"></section>
+      </main>
 
-    <footer>
-      <p>
-        Open source
-        <a href="https://github.com/ellie-holt/poem-generator" target="_blank"
-          >code</a
-        >
-        by
-        <a href="https://github.com/ellie-holt" target="_blank">Ellie Holt</a>
-      </p>
-    </footer>
+      <footer>
+        <p>
+          Open source
+          <a href="https://github.com/ellie-holt/poem-generator" target="_blank"
+            >code</a
+          >
+          by
+          <a href="https://github.com/ellie-holt" target="_blank">Ellie Holt</a>
+        </p>
+      </footer>
 
-    <script src="js/index.js"></script>
+      <script src="js/index.js"></script>
+    </div>
   </body>
 </html>
