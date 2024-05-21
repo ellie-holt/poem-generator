@@ -39,7 +39,7 @@ h1 {
 h2 {
   margin-left: 1rem;
   font-style: italic;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #57123c;
 }
 
@@ -67,8 +67,8 @@ a:active {
 }
 
 hr {
-  height: 0.5px;
-  margin-bottom: 1.5rem;
+  height: 0.7px;
+  margin-bottom: 1rem;
   border: none;
   background: var(--border-colour);
   background: linear-gradient(
@@ -81,23 +81,15 @@ hr {
 
 /*** LAYOUT ***/
 
-.bg-box {
-  position: absolute;
-  top: 1.5rem;
-  left: 2rem;
-  right: 2rem;
-  z-index: -1;
-  width: auto;
-  height: auto;
-  min-height: 30rem;
-  max-height: calc(100vh - 3em);
-  background-color: var(--bg-colour);
+.container {
+  margin: 0 auto;
+  max-width: 510px;
 }
 
 /* Header */
 
 header {
-  margin: 1rem 0 0.5rem 0;
+  margin: 1rem 0 2rem 0;
   padding: 0.8rem;
 }
 
@@ -151,7 +143,7 @@ footer p {
 
 .submit-button,
 .user-input {
-  margin: 0 auto 1rem;
+  margin: 0 auto;
   padding: 0.2rem;
   height: 2rem;
   border-style: solid;
@@ -189,9 +181,19 @@ footer p {
 
 /* Output */
 
+.welcome-message {
+  position: relative;
+  top: 2rem;
+  margin-left: 1.4rem;
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #74245589;
+}
+
 .generating-message {
   position: relative;
-  bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: right;
   font-size: 1.5rem;
   font-weight: bold;
@@ -200,11 +202,16 @@ footer p {
 
 .poem {
   margin: 0 3rem 0 0;
-  padding: 0.5rem 1rem 1.2rem;
+  padding: 0.5rem 1rem 0;
   max-width: fit-content;
-  font-size: 1.2rem;
+  min-height: 3rem;
+  font-size: 1.1rem;
   line-height: 1.4;
   background-color: var(--secondary-bg-colour);
+}
+
+.disappear {
+  display: none;
 }
 
 .hidden {
@@ -232,9 +239,69 @@ footer p {
 
 /*** RESPONSIVE BREAKPOINTS ***/
 
-@media screen and (min-width: 600px) {
-  .container {
-    margin: 0 auto;
-    max-width: 600px;
+@media screen and (min-width: 650px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+  h1 .top-line {
+    font-size: 3.7rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+
+  .submit-button,
+  .user-input {
+    font-size: 1rem;
+  }
+  .submit-button {
+    width: 4rem;
+  }
+  .submit-button:hover {
+    font-size: 1.1rem;
+  }
+  .welcome-message {
+    margin-left: 0.5rem;
+  }
+  .generating-message {
+    font-size: 1.8rem;
+  }
+  .poem {
+    font-size: 1.2rem;
+    min-height: 6rem;
+  }
+  footer p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h1 .top-line {
+    font-size: 4rem;
+    margin-left: 4.5rem;
+  }
+  h2 {
+    font-size: 2.1rem;
+  }
+
+  .submit-button,
+  .user-input {
+    height: 2.3rem;
+  }
+  .submit-button {
+    width: 4.2rem;
+  }
+
+  .generating-message {
+    font-size: 2rem;
+  }
+  .poem {
+    font-size: 1.3rem;
+  }
+  footer p {
+    font-size: 1.2rem;
   }
 }
